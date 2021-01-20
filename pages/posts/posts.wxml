@@ -1,0 +1,61 @@
+<view>
+    <!-- {{}}表示变量 -->
+    <swiper vertical="{{false}}" interval="2000" circular="{{true}}" indicator-dots="{{true}}" autoplay="{{true}}">
+        <!-- swiper下面只能写swiper-item别的没有意义 -->
+        <!-- swiper 滑动效果 -->
+        <swiper-item>
+            <!-- 插槽 -->
+            <image src="http://www.qushuaibo.cn/web_study/pic/a1.png"></image>
+        </swiper-item>
+        <swiper-item>
+            <!-- 插槽 -->
+            <image src="http://www.qushuaibo.cn/web_study/pic/a2.png"></image>
+        </swiper-item>
+        <swiper-item>
+            <!-- 插槽 -->
+            <image src="http://www.qushuaibo.cn/web_study/pic/a3.png"></image>
+        </swiper-item>
+    </swiper>
+    <!-- <!--第一页 -->
+    <!-- 实际上应该是循环生成的 -->
+    <!-- 新闻的内容来源与数据库中的数据 -->
+    <!-- 现在是静态数据 -->
+    <!-- 服务器的数据叫动态数据 网页存的是静态数据 -->
+    <!-- JavaScript首先拿到数据 ->数据绑定(setData) ->view -->
+    <!-- 单项数据绑定 只能js到view -->
+    <!-- 双向数据绑定 可以js到view也可以view到js-- vue3做的比较好>
+    <!-- 自定义组件 -->
+    <!-- 字体图表 -->
+    <!-- <l-icon name="cart" size="128" color="#34BFA3"/> -->
+    <!-- item是内置的 -->
+    <!-- item的名字是可以修改的
+    wx:for-item="x" 
+    不建议修改
+    当前循环的对象就是item
+    index序号
+    block 标签是括号的作用 包裹元素一起循环
+    如果只循环一个元素可以不用block 
+    建议加上block
+    key必须是唯一的 -->
+    <!-- 先静后动 -->
+    <block wx:for="{{postList}}" wx:key="postId">
+        <!-- {{index}} -->
+        <view bind:tap="onGoToDetail" class="post-container">
+            <view class="post-author-date">
+                <image catch:tap="onMAxImage" class="post-author" src="{{item.AuthourImg}}" />
+                <text class="post-date">{{item.date}}</text>
+            </view>
+            <!-- {{}}认为是变量 -->
+            <!-- {{}}只能写JavaScript表达式 不能写代码 -->
+            <text class="post-title">{{item.title}}</text>
+            <image class="post-image" src="{{item.img}}" />
+            <text class="post-content">{{item.author}}{{item.content}}</text>
+        </view>
+        <view class="post-like">
+            <l-icon class="post-like-image" size="32" name="favor/" />
+            <text class="post-like-font">{{item.dataNum.reading}}</text>
+            <l-icon class="post-like-image" size="32" name="eye/" />
+            <text class="post-like-font">{{item.dataNum.collection}}</text>
+        </view>
+    </block>
+</view>

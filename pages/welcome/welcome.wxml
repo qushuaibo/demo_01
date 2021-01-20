@@ -1,0 +1,25 @@
+<!-- /*
+ * @Descripttion: 
+ * @version: 
+ * @Author: qushuaibo
+ * @Date: 2020-09-21 13:56:54
+ * @LastEditors: qushuaibo
+ * @LastEditTime: 2020-09-23 22:03:11
+ */ -->
+<!-- view没有具体意义 布局 容器 -->
+<view class="container">
+    <!-- <image class="avatar" src="/images/a15.png"></image> -->
+    <!-- l-avatar的使用 -->
+    <l-avatar class="l-avatar" placement="bottom" shape="circle" open-data="{{['userAvatarUrl','userNickName']}}" size="200"></l-avatar>
+
+    <text class="motto">Hello,七月</text>
+
+    <!-- <button>开启小程序之旅</button> -->
+    <!-- 捕捉tap事件  bind:tap -->
+    <!-- onTap 回调函数 -->
+    <!-- catch 会阻止事件冒泡 bind不会阻止 -->
+    <view bind:tap="onTap" class="journey-container" >
+        <text class="journey">开启小程序之旅</text>
+    </view>
+</view>
+<!-- flex容器 -->
