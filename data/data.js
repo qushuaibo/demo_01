@@ -7,7 +7,8 @@ var postList = [{
     content: "8月9号，LPL常规塞首观之站",
     author: "张伟",
     date: "Nov 18 2020",
-    postId: "101",
+    detail:"贞观贞观年间贞观年间贞观年间贞观年间贞观年间贞观年间贞观年间贞观年间贞观年间贞观年间贞观年间贞观年间贞观年间贞观年间贞观年间贞观年间贞观年间贞观年间贞观年间贞观年间年间",
+    postId: "0",
     dataNum: {
         reading: "102",
         collection: "88",
@@ -19,7 +20,8 @@ var postList = [{
     content: "8月10号，LPL常规塞首观之站",
     author: "王振华",
     date: "Nov 18 2020",
-    postId: "102",
+    detail:"民民国民国民国民国民国民国民国民国民国民国民国民国民国民国民国民国民国民国民国民国民国民国民国民国民国民国民国民国民国民国国",
+    postId: "1",
     dataNum: {
         reading: "142",
         collection: "98",

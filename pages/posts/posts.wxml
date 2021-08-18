@@ -38,9 +38,11 @@
     建议加上block
     key必须是唯一的 -->
     <!-- 先静后动 -->
+
+    <!-- 自定义属性 -->
     <block wx:for="{{postList}}" wx:key="postId">
         <!-- {{index}} -->
-        <view bind:tap="onGoToDetail" class="post-container">
+        <view data-id="{{item.postId}}" bind:tap="onGoToDetail" class="post-container">
             <view class="post-author-date">
                 <image catch:tap="onMAxImage" class="post-author" src="{{item.AuthourImg}}" />
                 <text class="post-date">{{item.date}}</text>

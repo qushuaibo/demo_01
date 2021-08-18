@@ -12,7 +12,7 @@
 // console.log(postData)
 
 // 新的 比require少一级 但是名字必须和前面的一样
-import {postList} from '../../data/data.js'
+import { postList } from '../../data/data.js'
 console.log(postList)
 
 Page({
@@ -59,15 +59,18 @@ Page({
   },
   //跳转到新闻详情页面
   onGoToDetail(event) {
+    // 页面之间的数据通信
+    console.log(event);
+    const pid = event.currentTarget.dataset.id;
     wx.navigateTo({
-      url: '/pages/post_detail/post_detail',
+      url: '/pages/post_detail/post_detail?pid='+pid,
     })
   },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   // es6简化了function
-  onReady () {
+  onReady() {
   },
 
   /**

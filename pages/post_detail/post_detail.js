@@ -1,18 +1,26 @@
 // pages/post_detail/post_detail.js
-Page({
 
+import { postList } from '../../data/data.js'
+const app = getApp()
+console.log(app)
+Page({
   /**
    * 页面的初始数据
    */
   data: {
-
+    postData:{}
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    console.log(options); // 页面之间传递 信息接受方
+    console.log(postList[options.pid]);
+    const postData = postList[options.pid]
+    this.setData({
+      postData
+    })
   },
 
   /**

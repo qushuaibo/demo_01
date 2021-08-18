@@ -2,17 +2,17 @@
     <image class="head-image" src="http://www.qushuaibo.cn/web_study/pic/a7.png" />
     <view class="author-data">
         <image class="avatar" src="http://www.qushuaibo.cn/web_study/pic/a9.png" />
-        <text class="author">7月</text>
+        <text class="author">{{postData.author}}</text>
         <text class="const-test">发表于</text>
-        <text class="date">16小时之前</text>
+        <text class="date">{{postData.date}}</text>
     </view>
-    <text class="title">LPL夏季赛阵容</text>
+    <text class="title">{{postData.title}}</text>
     <view class="tool">
         <view class="circle">
-            <image class="circle-img" src="http://www.qushuaibo.cn/web_study/pic/share.png" />
-            <image class="circle-img" src="http://www.qushuaibo.cn/web_study/pic/enshrine.png" />
+            <image src="http://www.qushuaibo.cn/web_study/pic/enshrine.png" />
+            <image class="share-img" src="http://www.qushuaibo.cn/web_study/pic/share.png" />
         </view>
         <view class="horizon"></view>
     </view>
-    <text>8月9号，lpl收官之战</text>
+    <text>{{postData.detail}}</text>
 </view>
